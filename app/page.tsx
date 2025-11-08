@@ -26,12 +26,12 @@ const TOKEN = {
   chain: "Solana",
   taxTotal: 10, // %
   splits: {
-    holders: 60, // of tax
-    dev: 38,
+    holders: 50, // of tax
+    dev: 48,
     burn: 2,
   },
   links: {
-    twitter: "https://x.com/VaultyNetwork",
+    twitter: "https://x.com/vaulty_space",
     telegram: "https://t.me/vaulty_portal",
     taxsplit: ENV.TAXSPLIT_URL,
     dexscreener: ENV.DEXSCREENER_URL,
@@ -41,8 +41,8 @@ const TOKEN = {
 
 // Tokenomics (tax split)
 const tokenomics = [
-  { name: "Holder Rewards", value: 60 },
-  { name: "Dev Vault", value: 38 },
+  { name: "Holder Rewards", value: 50 },
+  { name: "Dev Vault", value: 48 },
   { name: "Burn", value: 2 },
 ];
 const chartColors = ["#22C55E", "#6366F1", "#F59E0B"]; // green, indigo, amber
@@ -94,13 +94,13 @@ const features = [
     icon: Rocket,
     title: "Vault-Powered Growth",
     desc:
-      "38% of the tax fuels the Dev Vault—covering listings, tools, buybacks, and marketing that feed the reward loop.",
+      "45% of the tax fuels the Dev Vault—covering listings, tools, buybacks, and marketing that feed the reward loop.",
   },
   {
     icon: Flame,
     title: "Deflationary Forever",
     desc:
-      "2% of every transaction is burned, permanently reducing supply and increasing scarcity over time.",
+      "5% of every transaction is burned, permanently reducing supply and increasing scarcity over time.",
   },
   {
     icon: ShieldCheck,
@@ -412,7 +412,7 @@ export default function VaultySite() {
       </Section>
 
 	
-      {/* TOKENOMICS (vertical bars, 60/38/2) */}
+      {/* TOKENOMICS (vertical bars, 50/48/2) */}
 		<div className="relative isolate w-full">
 		  <img
 			src="/vault_background.png"
@@ -427,15 +427,15 @@ export default function VaultySite() {
 			  Vaulty <span className="text-cyan-300">Tokenomics</span>
 			</h2>
 			<p className="text-white/70">
-			  Per-transaction tax: <strong>10%</strong> — split into <strong>60%</strong> Holder Rewards, <strong>38%</strong> Dev Vault, <strong>2%</strong> Burn.
+			  Per-transaction tax: <strong>10%</strong> — split into <strong>50%</strong> Holder Rewards, <strong>48%</strong> Dev Vault, <strong>2%</strong> Burn.
 			</p>
 
 			{/* Bars */}
 			<div className="mt-8">
 			  <TokenomicsBars
 				data={[
-				  { name: "Holder Rewards", value: 60, color: "#22C55E", sub: "Rewards distributed to holders" },
-				  { name: "Dev Vault",      value: 38, color: "#7B00FF", sub: "Growth, listings, buybacks, tools" },
+				  { name: "Holder Rewards", value: 50, color: "#22C55E", sub: "Rewards distributed to holders" },
+				  { name: "Dev Vault",      value: 48, color: "#7B00FF", sub: "Marketing, listings, buybacks, tools development" },
 				  { name: "Burn",           value: 2,  color: "#F59E0B", sub: "Every trade shrinks supply" },
 				]}
 			  />
