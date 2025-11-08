@@ -22,7 +22,7 @@ import { ENV } from "@/env";
 const TOKEN = {
   name: "VAULTY",
   ticker: "$VAULTY",
-  mint: ENV.MINT,
+  mint: "8AnxXuTUxB3RLiLJ9MJFqbV3WErcbByDh1XMWUEbZTAX",
   chain: "Solana",
   taxTotal: 10, // %
   splits: {
@@ -33,9 +33,9 @@ const TOKEN = {
   links: {
     twitter: "https://x.com/vaulty_space",
     telegram: "https://t.me/vaulty_portal",
-    taxsplit: ENV.TAXSPLIT_URL,
-    dexscreener: ENV.DEXSCREENER_URL,
-    jupiter: ENV.JUPITER_URL,
+    taxsplit: "https://www.taxsplit.app/token/8AnxXuTUxB3RLiLJ9MJFqbV3WErcbByDh1XMWUEbZTAX",
+    dexscreener: "https://dexscreener.com/solana/8AnxXuTUxB3RLiLJ9MJFqbV3WErcbByDh1XMWUEbZTAX",
+    jupiter: "https://jup.ag/swap?sell=So11111111111111111111111111111111111111112&buy=8AnxXuTUxB3RLiLJ9MJFqbV3WErcbByDh1XMWUEbZTAX",
   },
 };
 
