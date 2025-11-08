@@ -22,7 +22,7 @@ import { ENV } from "@/env";
 const TOKEN = {
   name: "VAULTY",
   ticker: "$VAULTY",
-  mint: "8AnxXuTUxB3RLiLJ9MJFqbV3WErcbByDh1XMWUEbZTAX",
+  mint: "7Hpr1EZ3b6BYJndVL4Qa3yexZMstRHwtEvKkftt9qWot",
   chain: "Solana",
   taxTotal: 10, // %
   splits: {
@@ -33,9 +33,9 @@ const TOKEN = {
   links: {
     twitter: "https://x.com/vaulty_space",
     telegram: "https://t.me/vaulty_portal",
-    taxsplit: "https://www.taxsplit.app/token/8AnxXuTUxB3RLiLJ9MJFqbV3WErcbByDh1XMWUEbZTAX",
-    dexscreener: "https://dexscreener.com/solana/8AnxXuTUxB3RLiLJ9MJFqbV3WErcbByDh1XMWUEbZTAX",
-    jupiter: "https://jup.ag/swap?sell=So11111111111111111111111111111111111111112&buy=8AnxXuTUxB3RLiLJ9MJFqbV3WErcbByDh1XMWUEbZTAX",
+    taxsplit: "https://www.taxsplit.app/token/7Hpr1EZ3b6BYJndVL4Qa3yexZMstRHwtEvKkftt9qWot",
+    dexscreener: "https://dexscreener.com/solana/7Hpr1EZ3b6BYJndVL4Qa3yexZMstRHwtEvKkftt9qWot",
+    jupiter: "https://jup.ag/swap?sell=So11111111111111111111111111111111111111112&buy=7Hpr1EZ3b6BYJndVL4Qa3yexZMstRHwtEvKkftt9qWot",
   },
 };
 
