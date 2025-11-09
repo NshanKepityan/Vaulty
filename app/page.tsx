@@ -10,6 +10,11 @@ import { ChevronRight } from "lucide-react";
 import WavyDivider from "@/components/WavyDivider";
 import CoinParticles from "@/components/CoinParticles";
 import { ENV } from "@/env";
+
+import SectionHeader from "@/components/SectionHeader";
+import SectionHeaderHighliteLeft from "@/components/SectionHeaderHighliteLeft";
+
+import RoadmapPath from "@/components/RoadmapPath";
 /**
  * $VAULTY – Landing (Next.js App Router)
  * Libraries: TailwindCSS, framer-motion, recharts
@@ -63,19 +68,6 @@ const Badge = ({ children }: { children: React.ReactNode }) => (
   </span>
 );
 
-const SectionHeader = ({ title, highlight }: { title: string; highlight?: string }) => (
-  <h2 className="text-4xl md:text-5xl font-extrabold leading-tight mb-8">
-    {title}{" "}
-    {highlight && <span className="text-cyan-300">{highlight}</span>}
-  </h2>
-);
-
-const SectionHeaderHighliteLeft = ({ highlight, title }: { highlight: string; title?: string }) => (
-  <h2 className="text-4xl md:text-5xl font-extrabold leading-tight mb-8">
-    {highlight && <span className="text-cyan-300">{highlight}</span>}{" "}
-	{title}
-  </h2>
-);
 
 const features = [
   {
@@ -510,31 +502,7 @@ export default function VaultySite() {
           className="absolute inset-0 -z-10 h-full w-full object-cover opacity-40"
           alt="bg"
         />
-        <Section id="roadmap">
-		
-		  <SectionHeaderHighliteLeft highlight="Vaulty" title="Roadmap" />
-          <div className="grid gap-6 md:grid-cols-3">
-            {[
-              { t: "🚀 Phase 1 – Launch", items: ["Launch on TaxSplit", "Grow our community to 500 holders", "Dexscreener application", "Achieve $100,000 market cap", ] },
-              { t: "📈 Phase 2 – Growth", items: ["CG/CMC applications", "Grow our community to 1000 holders", "Get our first CEX listing", "Achieve $500,000 market cap"] },
-              { t: "🛠️ Phase 3 – Utility", items: ["Utility projects release", "Launch Re-Vault", "Vaulty fox release", "Achieve $1M market cap"] },
-            ].map((col) => (
-              <motion.div
-                key={col.t}
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5 }}
-                className="rounded-2xl bg-white/5 p-6 ring-1 ring-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.35)]"
-              >
-                <h3 className="mb-3 text-xl font-semibold">{col.t}</h3>
-                <ul className="list-inside list-disc space-y-2 text-white/80">
-                  {col.items.map((i) => <li key={i} className="flex items-start gap-3"> <ChevronRight className="h-5 w-5 text-cyan-300 shrink-0" /> <span>{i}</span></li>)}
-                </ul>
-              </motion.div>
-            ))}
-          </div>
-        </Section>
+        <RoadmapPath/>
       </div>
 
       {/* COMMUNITY */}
